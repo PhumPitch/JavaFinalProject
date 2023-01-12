@@ -7,18 +7,27 @@ import javax.swing.*;
 public class classmain {
 
 	public static void main(String[] args) {
-		//JFrame frame = new JFrame();
-		/*frame.setTitle("Study TNI");
+		  
+		ImageIcon image = new ImageIcon("src//logo.png");
+		
+		JLabel label = new JLabel();
+		label.setText("Hey Jude");
+		label.setForeground(Color.blue);
+		// label.setIcon(image);
+		
+		JFrame frame = new JFrame();
+		frame.setTitle("Study TNI");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(true);
 		frame.setSize(420,420);
 		frame.setVisible(true);
+		frame.add(label);
 		
-		ImageIcon image = new ImageIcon("logo.png");
 		frame.setIconImage(image.getImage());
-		frame.getContentPane().setBackground(Color.black);
-		*/
-		MyFrame myFrame = new MyFrame();
+		frame.getContentPane().setBackground(Color.white);
+	 
+		//MyFrame myFrame = new MyFrame();
+		
 	}
 
 }

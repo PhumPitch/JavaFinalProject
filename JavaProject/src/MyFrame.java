@@ -12,6 +12,7 @@ public class MyFrame extends JFrame{
 		ImageIcon image = new ImageIcon("src\\logo.png");
 		this.setIconImage(image.getImage());
 		this.getContentPane().setBackground(Color.black);
+		 
 			
 	}
 
