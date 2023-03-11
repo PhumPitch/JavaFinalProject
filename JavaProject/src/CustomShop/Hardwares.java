@@ -21,6 +21,14 @@ public class Hardwares extends JFrame {
 
 	private JPanel contentPane;
 	private final PartData data;
+	private JComboBox cbPickUp;
+	private JComboBox cbSaddle;
+	private JComboBox cbTuner;
+	private JComboBox cbHandSide;
+	private JComboBox cbPickGuard;
+	private JComboBox cbPlasticColor;
+	private JComboBox cbHardwareColor;
+	private JCheckBox chckbxHardCase;
 
 	public Hardwares(PartData data) {
 		this.data = data;
@@ -60,7 +68,7 @@ public class Hardwares extends JFrame {
 		cbSaddle.setBounds(250, 118, 189, 33);
 		contentPane.add(cbSaddle);
 		cbSaddle.addItem("6-Saddle Tremolo");
-		cbSaddle.addItem("2-Piont Tremolo");
+		cbSaddle.addItem("2-Point Tremolo");
 		cbSaddle.addItem("Floyd Rose Tremolo");
 
 		JLabel lblTuner = new JLabel("Tuner");
@@ -141,9 +149,22 @@ public class Hardwares extends JFrame {
 		JButton nextButton = new JButton("Next");
 		nextButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				new Bills().setVisible(true);
+				int confirm = JOptionPane.showConfirmDialog(null,"Are you sure for this information ?");
+				if (confirm == 0) {
+				PartHardwares dataHW = new PartHardwares();
+				dataHW.setPickUps(cbPickUp.getSelectedItem().toString());
+				dataHW.setSaddle(cbSaddle.getSelectedItem().toString());
+				dataHW.setTuner(cbTuner.getSelectedItem().toString());
+				dataHW.setHandside(cbHandSide.getSelectedItem().toString());
+				dataHW.setPickguard(cbPickGuard.getSelectedItem().toString());
+				dataHW.setPlasticColor(cbPlasticColor.getSelectedItem().toString());
+				dataHW.setHardwareColor(cbHardwareColor.getSelectedItem().toString());
+				dataHW.setHardCase(chckbxHardCase.isSelected());
+				new Bills(data, dataHW).setVisible(true);
 				setVisible(false);
+				dispose();
+				}
+				
 			}
 		});
 		nextButton.setBounds(585, 477, 89, 23);
@@ -161,11 +182,51 @@ public class Hardwares extends JFrame {
 				woodwork.setRelicRadBtn(data.isRelic());
 				woodwork.setCbFretType(data.getFretType());
 				woodwork.setVisible(true);
+				/*dataHW.setPickUps(cbPickUp.getSelectedItem().toString());
+				dataHW.setSaddle(cbSaddle.getSelectedItem().toString());
+				dataHW.setTuner(cbTuner.getSelectedItem().toString());
+				dataHW.setHandside(cbHandSide.getSelectedItem().toString());
+				dataHW.setPickguard(cbPickGuard.getSelectedItem().toString());
+				dataHW.setPlasticColor(cbPlasticColor.getSelectedItem().toString());
+				dataHW.setHardwareColor(cbHardwareColor.getSelectedItem().toString());
+				dataHW.setHardCase(chckbxHardCase.isSelected());*/
 				dispose();
 			}
 		});
 		BackButton.setBounds(10, 477, 89, 23);
 		contentPane.add(BackButton);
 
+	}
+
+	public void setCbPickUp(String cbPickUp) {
+		this.cbPickUp.setSelectedItem(cbPickUp);
+	}
+
+	public void setCbSaddle(String cbSaddle) {
+		this.cbSaddle.setSelectedItem(cbSaddle);
+	}
+
+	public void setCbTuner(String cbTuner) {
+		this.cbTuner.setSelectedItem(cbSaddle);
+	}
+
+	public void setCbHandSide(String cbHandSide) {
+		this.cbHandSide.setSelectedItem(cbHandSide);
+	}
+
+	public void setCbPickGuard(String cbPickGuard) {
+		this.cbPickGuard.setSelectedItem(cbPickGuard);
+	}
+
+	public void setCbPlasticColor(String cbPlasticColor) {
+		this.cbPlasticColor.setSelectedItem(cbPlasticColor);
+	}
+
+	public void setCbHardwareColor(String cbHardwareColor) {
+		this.cbHardwareColor.setSelectedItem(cbHardwareColor);
+	}
+
+	public void setChckbxHardCase(boolean chckbxHardCase) {
+		this.chckbxHardCase.setSelected(chckbxHardCase);;
 	}
 }

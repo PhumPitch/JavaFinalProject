@@ -8,6 +8,7 @@ public class Main {
 			public void run() {
 				
 				try {					
+					
 					WoodworkPart frame = new WoodworkPart();
 					frame.setVisible(true);
 					frame.setResizable(false);

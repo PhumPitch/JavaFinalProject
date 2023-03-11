@@ -1,4 +1,4 @@
-package CustomShop;
+    package CustomShop;
 
 import java.awt.EventQueue;
 
@@ -17,7 +17,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class WoodworkPart extends JFrame {
-
+	
 	private JPanel contentPane;
 	private JTextField txtColorBody;
 	private JComboBox cbBody;
@@ -72,7 +72,7 @@ public class WoodworkPart extends JFrame {
 				new ColorTable().setVisible(true);
 			}
 		});
-		ShowColor.setBounds(431, 166, 92, 23);
+		ShowColor.setBounds(431, 166, 111, 23);
 		contentPane.add(ShowColor);
 
 		JLabel bodyPart = new JLabel("Body Part");
@@ -153,7 +153,6 @@ public class WoodworkPart extends JFrame {
 					JOptionPane.showMessageDialog(null, "Please Enter the Color");
 				} else {
 					new Hardwares(data).setVisible(true);
-					setVisible(false);
 					dispose();
 				}
 			}
