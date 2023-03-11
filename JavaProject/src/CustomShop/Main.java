@@ -9,7 +9,7 @@ public class Main {
 				
 				try {					
 					
-					WoodworkPart frame = new WoodworkPart();
+					FrontPage frame = new FrontPage();
 					frame.setVisible(true);
 					frame.setResizable(false);
 
