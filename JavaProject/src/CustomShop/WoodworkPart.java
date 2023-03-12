@@ -152,7 +152,9 @@ public class WoodworkPart extends JFrame {
 				if (txtColorBody.getText().isEmpty()) {
 					JOptionPane.showMessageDialog(null, "Please Enter the Color");
 				} else {
-					new Hardwares(data).setVisible(true);
+					Hardwares HW = new Hardwares(data);
+					HW.setLocation(getLocation());
+					HW.setVisible(true);
 					dispose();
 				}
 			}

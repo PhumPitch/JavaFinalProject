@@ -32,7 +32,9 @@ public class FrontPage extends JFrame {
 		btnLetsBuildYour.setFont(new Font("Tahoma", Font.BOLD, 16));
 		btnLetsBuildYour.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new WoodworkPart().setVisible(true);
+				WoodworkPart woodwork = new WoodworkPart();
+				woodwork.setLocation(getLocation());
+				woodwork.setVisible(true);
 				dispose();
 			}
 		});

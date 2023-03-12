@@ -11,9 +11,12 @@ import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.text.DecimalFormat;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
@@ -184,6 +187,31 @@ public class Bills extends JFrame {
 		lblTotal.setFont(new Font("Tahoma", Font.BOLD, 26));
 		lblTotal.setBounds(296, 392, 260, 19);
 		contentPane.add(lblTotal);
+		
+		JButton btnEmail = new JButton("Enter The Email");
+		btnEmail.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String email = JOptionPane.showInputDialog("INPUT YOUR G-MAIL TO CONFIRM THE ORDER");
+				if(email.endsWith("@gmail.com")) {
+					FileOrder fileOR = new FileOrder(data,dataHW, email);
+					try {
+						fileOR.writeBill();
+					} catch (IOException e1) {
+						e1.printStackTrace();
+					}
+					JOptionPane.showMessageDialog(null, "Your order has been saved to the file");
+					FrontPage fron = new FrontPage();
+					fron.setLocation(getLocation());
+					fron.setVisible(true);
+					dispose();
+				
+				}else {
+					JOptionPane.showMessageDialog(null, "valid email", "PLEASE INPUT G-MAIL", JOptionPane.ERROR_MESSAGE);
+				}
+			}
+		});
+		btnEmail.setBounds(551, 472, 123, 28);
+		contentPane.add(btnEmail);
 		
 		
 		

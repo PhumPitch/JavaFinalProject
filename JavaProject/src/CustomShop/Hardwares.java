@@ -160,7 +160,10 @@ public class Hardwares extends JFrame {
 				dataHW.setPlasticColor(cbPlasticColor.getSelectedItem().toString());
 				dataHW.setHardwareColor(cbHardwareColor.getSelectedItem().toString());
 				dataHW.setHardCase(chckbxHardCase.isSelected());
-				new Bills(data, dataHW).setVisible(true);
+				Bills bill = new Bills(data, dataHW);
+				bill.setLocation(getLocation());
+				bill.setVisible(true);
+				
 				setVisible(false);
 				dispose();
 				}
@@ -181,15 +184,8 @@ public class Hardwares extends JFrame {
 				woodwork.setCbRadius(data.getNeckRadius());
 				woodwork.setRelicRadBtn(data.isRelic());
 				woodwork.setCbFretType(data.getFretType());
+				woodwork.setLocation(getLocation());
 				woodwork.setVisible(true);
-				/*dataHW.setPickUps(cbPickUp.getSelectedItem().toString());
-				dataHW.setSaddle(cbSaddle.getSelectedItem().toString());
-				dataHW.setTuner(cbTuner.getSelectedItem().toString());
-				dataHW.setHandside(cbHandSide.getSelectedItem().toString());
-				dataHW.setPickguard(cbPickGuard.getSelectedItem().toString());
-				dataHW.setPlasticColor(cbPlasticColor.getSelectedItem().toString());
-				dataHW.setHardwareColor(cbHardwareColor.getSelectedItem().toString());
-				dataHW.setHardCase(chckbxHardCase.isSelected());*/
 				dispose();
 			}
 		});
