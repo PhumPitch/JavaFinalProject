@@ -39,19 +39,19 @@ public class FileOrder {
 		
 		writer.write("------------------------"+ getFormattedDate()+"------------------------"
 					+"\nemail : " + email
-					+"\nColor & Wood Body : "+dataHW.getHandside()+(data.isRelic()?" Relic ":" No Relic ")+ data.getColor()
+					+"\n\nColor & Wood Body : "+dataHW.getHandside()+(data.isRelic()?" Relic ":" No Relic ")+ data.getColor()
 					+" "+data.getBodyWood()
 					
 					+"\nNeck & Fret : " + data.getNeckRadius()+" "+data.getNeckShape()
 					+" "+ data.getNeckWood()+" "+data.getFretType()
 					
-					+"\n- Hardwares - "
+					+"\n\n- Hardwares - "
 					+"\nPickups : "+dataHW.getPickUps()
 					+"\nSaddle  : "+dataHW.getSaddle()
 					+"\nTuner   : "+dataHW.getTuner()				 
 				    +"\nPickguard Type  : "+dataHW.getPickguard()
-				    +"\nPlastic Coler   : "+dataHW.getPlasticColor()
-				    +"\nHardwares Color :"+dataHW.getHardwareColor()
+				    +"\nPlastic Color   : "+dataHW.getPlasticColor()
+				    +"\nHardwares Color : "+dataHW.getHardwareColor()
 				    +"\nHardcase : "+(dataHW.isHardCase()?"With Hardcase":"NO Hardcase")
 					+"\nTotal : "+ decFor.format(total) +" Baht.");
 		writer.write("\n-------------------------------------------------------------------\n");
