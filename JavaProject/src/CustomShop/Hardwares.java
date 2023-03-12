@@ -98,8 +98,8 @@ public class Hardwares extends JFrame {
 		cbHandSide.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		cbHandSide.setBounds(250, 265, 189, 33);
 		contentPane.add(cbHandSide);
-		cbHandSide.addItem("Right Handed");
-		cbHandSide.addItem("Left Handed");
+		cbHandSide.addItem("Right-Handed");
+		cbHandSide.addItem("Left-Handed");
 
 		JLabel lblPickGuard = new JLabel("Pickguard");
 		lblPickGuard.setFont(new Font("Tahoma", Font.PLAIN, 18));

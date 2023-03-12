@@ -191,15 +191,16 @@ public class Bills extends JFrame {
 		JButton btnEmail = new JButton("Enter The Email");
 		btnEmail.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String email = JOptionPane.showInputDialog("INPUT YOUR G-MAIL TO CONFIRM THE ORDER");
-				if(email.endsWith("@gmail.com")) {
-					FileOrder fileOR = new FileOrder(data,dataHW, email);
+				String email = JOptionPane.showInputDialog("INPUT YOUR GMAIL TO CONFIRM THE ORDER");
+				if(email.toLowerCase().endsWith("@gmail.com")) {
+					FileOrder fileOR = new FileOrder(data,dataHW,email.toLowerCase());
 					try {
 						fileOR.writeBill();
 					} catch (IOException e1) {
 						e1.printStackTrace();
 					}
-					JOptionPane.showMessageDialog(null, "Your order has been saved to the file");
+					JOptionPane.showMessageDialog(null, "Your order has been saved to the file"
+							+ "\n* Thank You for Choosing Us *");
 					FrontPage fron = new FrontPage();
 					fron.setLocation(getLocation());
 					fron.setVisible(true);
