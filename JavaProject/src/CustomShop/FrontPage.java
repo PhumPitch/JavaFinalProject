@@ -13,6 +13,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.awt.event.ActionEvent;
 import java.awt.CardLayout;
@@ -29,10 +30,8 @@ public class FrontPage extends JFrame {
 	private String emailChk;
 	private String dateLine;
 	private String email;
-
 	private String body;
 	private String neck;
-
 	private String hardwares;
 	private String pickup;
 	private String saddle;
@@ -44,12 +43,6 @@ public class FrontPage extends JFrame {
 	private String total;
 	private String line;
 
-	/*
-	 * 
-	 * BufferedReader read =new BufferedReader(new FileReader(toRead)); String temp
-	 * = ""; while((temp = read.readLine())!= null ) { String orderDetails = temp;
-	 * read.close(); }
-	 */
 	public void CheckOrder(String check) throws IOException {
 		emailChk = check;
 		File toRead = new File(Paths.get("").toAbsolutePath() + "\\Bill.txt");
@@ -85,10 +78,9 @@ public class FrontPage extends JFrame {
 				countElse++;
 
 			}
-			if (countLoop == countElse || scan.next().equals(""))
-				JOptionPane.showMessageDialog(null, " This Email has NO Order ");
-
-		}
+		};
+		if (countLoop == countElse || scan.nextLine().equals(""))
+			JOptionPane.showMessageDialog(null, " This Email has NO Order ");
 
 		scan.close();
 	}
@@ -127,12 +119,12 @@ public class FrontPage extends JFrame {
 				while(!emailChk.endsWith("@gmail.com")) {
 					emailChk = JOptionPane.showInputDialog(null, "Input Your Email To Check Your Order, with Gmail");
 				}
-				String check = ("email : " + emailChk);
+				String check = ("email : " + emailChk).toLowerCase();
 				try {
 					CheckOrder(check);
-
-				} catch (IOException e1) {
-					e1.printStackTrace();
+					
+				} catch (NoSuchElementException | IOException e1) {
+					
 				}
 
 			}

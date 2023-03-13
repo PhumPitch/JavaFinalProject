@@ -1,0 +1,46 @@
+
+
+Version:	3.50
+CmdLine:	C:\Users\kim\Desktop\ToEXE\JavaProject.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\kim\Desktop\ToEXE\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+JRE paths:	JRE
+Check launcher:	C:\Users\kim\Desktop\ToEXE\JRE\bin\javaw.exe (not found)
+Error msg:	This application requires a Java Runtime Environment.
+
+
+Version:	3.50
+CmdLine:	C:\Users\kim\Desktop\ToEXE\JavaProject.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\kim\Desktop\ToEXE\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+JRE paths:	JRE
+Check launcher:	C:\Users\kim\Desktop\ToEXE\JRE\bin\javaw.exe (not found)
+Error msg:	This application requires a Java Runtime Environment.
+
+
+Version:	3.50
+CmdLine:	C:\Users\kim\Desktop\ToEXE\JavaProject.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\kim\Desktop\ToEXE\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+JRE paths:	JRE
+Check launcher:	C:\Users\kim\Desktop\ToEXE\JRE\bin\javaw.exe (OK)
+Version string: 1.008.000_351 / 64-Bit (OK)
+Launcher:	C:\Users\kim\Desktop\ToEXE\JRE\bin\javaw.exe
+Launcher args:	-jar "C:\Users\kim\Desktop\ToEXE\JavaProject.exe"
+Args length:	49/32768 chars
+Exit code:	0
